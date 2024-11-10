@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://br4wir4su8p4"]
+
+[ext_resource type="Script" path="res://modules/Godot-DynamicProgressBar/DynamicProgressBar.gd" id="2_tdf42"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lthoj"]
+bg_color = Color(0, 0, 0, 0.509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ej2c0"]
+bg_color = Color(0.0313726, 0.729412, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxtof"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_haduc"]
+bg_color = Color(1, 0.235294, 0, 1)
+
+[node name="DynamicProgressBar" type="ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+offset_bottom = 23.0
+mouse_filter = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_lthoj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ej2c0")
+value = 100.0
+script = ExtResource("2_tdf42")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_fxtof")
+theme_override_styles/fill = SubResource("StyleBoxFlat_haduc")
+show_percentage = false
+metadata/_edit_use_anchors_ = true
