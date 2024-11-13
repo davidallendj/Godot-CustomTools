@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dued0sfkdm8dx"]
+
+[ext_resource type="Script" path="res://src/ui/dynamic_touchpad/dynamic_touchpad.gd" id="1_lnog8"]
+[ext_resource type="Texture2D" uid="uid://bepw5lelpi6fb" path="res://assets/textures/up.png" id="2_pjosm"]
+[ext_resource type="Texture2D" uid="uid://j7vsaptdaryy" path="res://assets/textures/right.png" id="3_wx7o6"]
+[ext_resource type="Texture2D" uid="uid://dxg3i77gwe78j" path="res://assets/textures/down.png" id="4_hi452"]
+[ext_resource type="Texture2D" uid="uid://dq6p6cf0spfip" path="res://assets/textures/left.png" id="5_ro7bx"]
+[ext_resource type="Texture2D" uid="uid://bttx60j8y0au4" path="res://assets/textures/crossair_white.png" id="6_5qf2o"]
+
+[node name="dynamic_touchpad" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lnog8")
+
+[node name="start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "start"
+
+[node name="up" type="TextureRect" parent="start"]
+layout_mode = 0
+offset_top = -104.0
+offset_right = 128.0
+offset_bottom = -4.0
+texture = ExtResource("2_pjosm")
+
+[node name="right" type="TextureRect" parent="start"]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 228.0
+offset_bottom = 128.0
+texture = ExtResource("3_wx7o6")
+
+[node name="down" type="TextureRect" parent="start"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 228.0
+texture = ExtResource("4_hi452")
+
+[node name="left" type="TextureRect" parent="start"]
+layout_mode = 0
+offset_left = -104.0
+offset_right = -4.0
+offset_bottom = 128.0
+texture = ExtResource("5_ro7bx")
+
+[node name="cursor" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("6_5qf2o")
+stretch_mode = 5
