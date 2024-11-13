@@ -31,7 +31,7 @@ func _set_button_index(index: int) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		_lmb_pressed = event.get_button_index() == MOUSE_BUTTON_LEFT and event.is_pressed()
-		if not _lmb_pressed:
+		if event.get_button_index() == MOUSE_BUTTON_LEFT and event.is_released():
 			print("button index: ", _button_index)
 			button_pressed.emit(_button_index)
 			const delta := 10
